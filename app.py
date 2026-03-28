@@ -9,7 +9,7 @@ load_dotenv()  # Load environment variables from .env file
 st.set_page_config(page_title="AI Code Reviewer", page_icon="🤖", layout="wide")
 
 # Initialize Groq Client
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(api_key = st.secrets["GROQ_API_KEY"])
 
 st.title("🤖 Smart Code Reviewer")
 st.caption("Submit your code for a readability, structure, and maintainability audit.")
